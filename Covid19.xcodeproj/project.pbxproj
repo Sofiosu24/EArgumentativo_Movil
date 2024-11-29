@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		5E9FC48C2CF7B2CD00195D86 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 5E9FC48B2CF7B2CD00195D86 /* Alamofire */; };
-		5E9FC4922CF7B3C600195D86 /* DGCharts in Frameworks */ = {isa = PBXBuildFile; productRef = 5E9FC4912CF7B3C600195D86 /* DGCharts */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,7 +56,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5E9FC4922CF7B3C600195D86 /* DGCharts in Frameworks */,
 				5E9FC48C2CF7B2CD00195D86 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -120,7 +118,6 @@
 			name = covid19;
 			packageProductDependencies = (
 				5E9FC48B2CF7B2CD00195D86 /* Alamofire */,
-				5E9FC4912CF7B3C600195D86 /* DGCharts */,
 			);
 			productName = covid19;
 			productReference = 5E9FC42D2CF7A65E00195D86 /* covid19.app */;
@@ -206,7 +203,6 @@
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
 				5E9FC48A2CF7B2CD00195D86 /* XCRemoteSwiftPackageReference "Alamofire" */,
-				5E9FC4902CF7B3C600195D86 /* XCRemoteSwiftPackageReference "Charts" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 5E9FC42E2CF7A65E00195D86 /* Products */;
@@ -581,14 +577,6 @@
 				minimumVersion = 5.10.2;
 			};
 		};
-		5E9FC4902CF7B3C600195D86 /* XCRemoteSwiftPackageReference "Charts" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/ChartsOrg/Charts";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 5.1.0;
-			};
-		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -596,11 +584,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 5E9FC48A2CF7B2CD00195D86 /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
-		};
-		5E9FC4912CF7B3C600195D86 /* DGCharts */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 5E9FC4902CF7B3C600195D86 /* XCRemoteSwiftPackageReference "Charts" */;
-			productName = DGCharts;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

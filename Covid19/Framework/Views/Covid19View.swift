@@ -18,12 +18,14 @@ struct Covid19View: View {
                 } else if let monthlyData = viewModel.monthlyCovidData {
                     List(monthlyData, id: \.month) { data in
                         VStack(alignment: .leading) {
-                            Text("Month: \(data.month)")
+                            Text("Cases per month: \(data.month)")
                                 .font(.headline)
                             Text("Total Cases: \(data.total)")
                                 .font(.subheadline)
+                                .foregroundColor(.red)
                             Text("New Cases: \(data.newCases)")
                                 .font(.subheadline)
+                                .foregroundColor(.blue)
                         }
                     }
                 } else {

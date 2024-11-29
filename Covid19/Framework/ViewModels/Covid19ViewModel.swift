@@ -12,10 +12,10 @@ class Covid19ViewModel: ObservableObject {
     @Published var monthlyCovidData: [(month: String, total: Int, newCases: Int)]? = nil
     @Published var isLoading = false
 
-    private let covid19Repository: Covid19Repository
+    var covid19Requirement: Covid19RequirementProtocol
 
-    init(repository: Covid19Repository = Covid19Repository()) {
-        self.covid19Repository = repository
+    init (covid19Requirement: Covid19RequirementProtocol = Covid19Requirement.shared) {
+        self.covid19Requirement = covid19Requirement
     }
 
     @MainActor
@@ -26,7 +26,7 @@ class Covid19ViewModel: ObservableObject {
 
         do {
             // Llama al repositorio para obtener los datos
-            if let data = await covid19Repository.fetchCovid19Data() {
+            if let data = await covid19Requirement.fetchCovid19Data() {
                 self.monthlyCovidData = data
             } else {
                 self.monthlyCovidData = nil

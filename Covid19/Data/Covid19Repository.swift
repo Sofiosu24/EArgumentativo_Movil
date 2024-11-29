@@ -16,8 +16,13 @@ struct Api {
     }
 }
 
+protocol Covid19APIProtocol {
+    func fetchCovid19Data() async -> [(month: String, total: Int, newCases: Int)]?
+}
+
 // Implementación del Repositorio
 class Covid19Repository: Covid19APIProtocol {
+    static let shared = Covid19Repository()
     let nservice: Covid19APIService
 
     init(nservice: Covid19APIService = Covid19APIService.shared) {
